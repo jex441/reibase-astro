@@ -1,0 +1,36 @@
+---
+const currentYear = new Date().getFullYear();
+
+---
+
+<footer class="footer">
+      <span>Copyright © {currentYear} Turbosrc contributors</span>
+</footer>
+<style>
+	.footer {
+     display: flex;
+     padding: 9px 0;
+     color: white;
+     background-color: #160f24;
+     margin: auto 0;
+	 
+ }
+ .footer span{
+	font-family: 'Poppins', sans-serif;
+	font-size:12px;
+	padding:0 0px 0 10px;
+ }
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>
