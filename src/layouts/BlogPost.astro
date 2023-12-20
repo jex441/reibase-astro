@@ -13,7 +13,9 @@ const { title, description, pubDate, updatedDate, heroImage, subText } = Astro.p
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/blog.css" />
+
 		<style is:global>
       
 
@@ -32,6 +34,11 @@ const { title, description, pubDate, updatedDate, heroImage, subText } = Astro.p
 					margin: 0 auto;
 					background-color: white;
 				  }
+
+				  article{
+					border-bottom: 1px solid var(--lightgray);
+					margin-bottom: 30px;
+				  }
 				  
 				  .hero-image {
 					width: 100%;
@@ -45,15 +52,18 @@ const { title, description, pubDate, updatedDate, heroImage, subText } = Astro.p
 				  .prose {
 					width: 100%;
 					margin: auto;
-						font-family: 'Poppins', sans-serif;
+					font-family: 'Inter', sans-serif;
 			
 				  }
 			
 				  .prose p{
-				
+					line-height: 38px;
+    font-size: 18px;
 			  }
 				  .prose strong{
-					font-size: 21px;
+					font-size: 18px;
+
+					font-weight: 600;
 				  }
 				
 				  .title {
@@ -64,6 +74,7 @@ const { title, description, pubDate, updatedDate, heroImage, subText } = Astro.p
 				display: flex;
 				flex-direction: column;
 				gap: 20px;
+				border-bottom: 1px solid var(--lightgray);
 				  }
 				  .title h1 {
 					margin: 0 0 0.5em 0;
@@ -149,21 +160,17 @@ const { title, description, pubDate, updatedDate, heroImage, subText } = Astro.p
 				font-size: 26px;
 				font-weight: 600;
 				  }
-				  
+				  .description-line, time{
+					font-weight: 400;
+					font-size: 18px;
+				  }
 			
-				  @media (max-width: 900px) {
-					.blog {
-					  padding: 3rem 2rem 0 1rem;
-					}
-			
-					.author span img {
-					  margin-right: 1rem;
-					}
-			
-					.blog article {
-					  height: auto;
+				  @media (max-width: 855px) {
+					.title{
+						margin-top: 40px;
 					}
 				  }
+
 			
 			
 				</style> 
