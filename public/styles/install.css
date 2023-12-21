@@ -3,7 +3,7 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-image: url('globelight.png');
+    background-image: url('../globelight.png');
     background-repeat: no-repeat;
     background-position: 100px 40px;
     background-size: cover;

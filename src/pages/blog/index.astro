@@ -33,6 +33,7 @@ const posts = (await getCollection("blog")).sort(
 		margin:0px;
 	  }
       main {
+        min-height: calc(100vh - 73px);
       }
       section{
         width: 70%;
@@ -57,11 +58,7 @@ const posts = (await getCollection("blog")).sort(
         margin-bottom: 0.5rem;
         border-radius: 12px;
       }
-      ul li a {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
+      
 	  .posts-map{
 		display: flex;
 		flex-direction: column;
@@ -114,7 +111,15 @@ const posts = (await getCollection("blog")).sort(
         color: black;
       }
 
-     
+      @media (max-width: 855px) {
+        ul{
+          margin-top:84px;
+        }
+        .posts-map{
+          display: list-item;
+        }
+      }
+
     </style>
   </head>
   <body>
