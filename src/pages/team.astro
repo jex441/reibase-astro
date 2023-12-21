@@ -1,0 +1,101 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reibase</title>
+    <link rel="stylesheet" href="/styles/team.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+  </script>
+  </head>
+
+  <body>
+    <Header/>
+    <!-- Content -->
+    <section class="teamContent">
+      <div class="teamWrapper">
+        <div class="teamPhoto" style="background-image: url('../sophia.png')" ></div>
+        <div class="teamBio">
+            <span class="name">Sophia d'Antoine</span>
+           
+            <span class="bio">
+              <p>Leveraging her prowess as a cybertech entrepreneur and security researcher, Sophia develops the business and plots the direction of Reibase. She’s also  focused on how Reibase can shore up critical open-source dependencies (NatSec) using a stakeholder model.</p>
+            
+           </div>
+    </div>
+    <div class="teamWrapper">
+        <div class="teamPhoto" style="background-image: url('../dorian.png')" ></div>
+        <div class="teamBio">
+            <span class="name">Dorian Sebastian Key</span>
+            <span class="bio">
+              <p>As a  pythonista with an  investment banker’s  heart, Dorian guides the financial planning aspects of Reibase. He gives us considerable experience to navigate the capital market and tech business landscape.</p>
+              
+           </div>
+    </div>
+    <div class="teamWrapper">
+        <div class="teamPhoto" style="background-image: url('../david.png')" ></div>
+        <div class="teamBio">
+            <span class="name">David Szigeti</span>
+            <span class="bio">
+              <p>His experience with shareholder activism and computing is utilized to execute all aspects of Reibase’s vision.
+              David is the creator of Turbosrc and its stakeholder model.</p>
+           </div>
+    </div>
+
+    <div class="teamWrapper">
+      <div class="teamPhoto" style="background-image: url('../jeff.png')" ></div>
+        <div class="teamBio">
+          <span class="name">Jeffrey Wood</span>
+          <span class="bio">
+            <p>Jeff is a versatile member of our team with a background in both fine art and full stack development. 
+              As a designer, he brings a creative eye to our web apps and the front-end. 
+             </p>
+         </div>
+    </div>
+  
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <div>
+      <a href="./index.html"><img src="./logowhite.png" /></a>
+        </div>
+        <div>
+        <ul>
+          <li>
+            <a href="./install.html">Install</a>
+            </li>
+          <li>
+          <a href="./team.html">Team</a>
+          </li>
+        <li><a href="./blog/articles.html">Blog</a>
+        </li>
+        </ul>
+      </div>
+      <div>
+        <form class="emailList" name="demo-form" id="template_v1ulh7q">
+          <label for="demo-form">Book a demo</label>
+          <input type="text" placeholder="Name" name="from_name">
+          <input type="email" placeholder="Email Address" name="reply_to" />
+          <button type="submit" class="demoButton">Submit</button>
+          <div class="success">Thank you - we will be in touch shortly.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+      <div class="copyright">
+        Copyright © 2023 Reibase, Inc.
+      </div>
+    </footer>
+  </body>
+</html>
