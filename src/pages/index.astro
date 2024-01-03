@@ -2,6 +2,10 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Landing from '../components/Home/Landing.astro';
+import UseCases from '../components/Home/UseCases.astro';
+import HomeTeam from '../components/Home/HomeTeam.astro';
+import DemoVideo from '../components/Home/DemoVideo.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 <!DOCTYPE html>
@@ -16,171 +20,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <link rel="stylesheet" href="styles/hometeam.css" />
     <link rel="stylesheet" href="styles/demoVideo.css" />
   </head>
-
   <body>
-    <span>
     <Header/>
-    <!-- Announcments Button -->
-    <!-- <section class="announcementsWrapper"><button type="button" class="button">Announcements</button></section> -->
 
     <!-- Content -->
-    <section class="landing">
-      <!-- Intro Text Block -->
-      <div class="intro">
-        <span class="h1">
-          The future of open source infrastructure
-        </span>
-        <p>
-          Reibase provides a way to monetize open source projects, clearly define control of the project, and reward contributors giving back to the community.
-        </p>
-        <a href="/install/"><button type="button" class="button">Get Started</button></a>
-        </div>
-      
-    </section>
-
+    <Landing />
 
     <!-- Use Cases / Features -->
-    <div class="useCases">
-      <div class="useCaseHeading">
-        Make open source your strength
-      </div>
-      <div class="useCase">
-        <div class="useCaseIcon">
-          <img src="./lockicon.png" />
-        </div>
-        <div class="useCaseText">
-        <h3>Secure your open source dependencies</h3>
-        <p>Invest in the project and have a seat at the table for future development</p>
-      </div>
-    </div>
-
-    <div class="useCase">
-      <div class="useCaseIcon">
-        <img src="./contributionicon.png" />
-      </div>
-      <div class="useCaseText">
-      <h3>Incentivize valuable contributions</h3>
-      <p>Take an active role in your favorite open source projects</p>
-    </div>
-  </div>
-
-  <div class="useCase">
-    <div class="useCaseIcon">
-      <img src="./riskicon.png" />
-    </div>
-    <div class="useCaseText">
-    <h3>Manage potential risk</h3>
-    <p>Create transparency around code contributions and their supporters</p>
-  </div>
-</div>
-
-<div class="useCase">
-  <div class="useCaseIcon">
-    <img src="./contributorsicon.png" />
-  </div>
-  <div class="useCaseText">
-  <h3>Know your contributors</h3>
-  <p>Build a community around open source projects</p>
-</div>
-</div>
-
-  <div class="useCase">
-    <div class="useCaseIcon">
-      <img src="./valueicon.png" />
-    </div>
-    <div class="useCaseText">
-    <h3>Value is shared</h3>
-    <p>Reward contributors with part of the value they are creating.</p>
-  </div>
-</div>
-
-<div class="useCase">
-  <div class="useCaseIcon">
-    <img src="busicon.png" />
-  </div>
-  <div class="useCaseText">
-  <h3>Bus factor is zero</h3>
-  <p>Others can now step in to assist and maintain a key open source project</p>
-</div>
-</div>
-
-      </div>
+    <UseCases />
     
       <!-- Team -->
-      <div class="homeTeam">
-
-        <div class="homeTeamMember">
-          <div class="homeTeamMemberImage">
-            <img src="sophia.png" />
-          </div>
-          <div class="homeTeamText">
-          <h3>Sophia d'Antoine</h3>
-          <p>Co-founder and CEO</p>
-        </div>
-        </div>
-
-        <div class="homeTeamMember">
-          <div class="homeTeamMemberImage">
-            <img src="./david.png" />
-          </div>
-          <div class="homeTeamText">
-          <h3>David Szigeti</h3>
-          <p>Co-founder and CTO</p>
-        </div>
-        </div>
-
-        <div class="homeTeamMember">
-          <div class="homeTeamMemberImage">
-            <img src="dorian.png" />
-          </div>
-          <div class="homeTeamText">
-          <h3>Dorian Key</h3>
-          <p>Co-founder and CFO</p>
-        </div>
-        </div>
-
-        <div class="homeTeamMember">
-          <div class="homeTeamMemberImage">
-            <img src="jeff.png" />
-          </div>
-          <div class="homeTeamText">
-          <h3>Jeffrey Wood</h3>
-          <p>Co-founder</p>
-        </div>
-        </div>
-        
-        <p class="homeTeamAbout">
-          Our team here at Reibase is deeply invested in the open source ecosystem. Our diverse backgrounds in cybersecurity, software supply chains, web3, and open source prepared us for this mission; our history successfully starting and exiting companies will prepare us for success. Our expertise has led us all to the same thesis:<span class="homeTeamAboutDark"> Let’s fix open source and make it a welcome place for future contributors and consumers alike.</span>
-        </p>
-      </div>
+    <HomeTeam />
 
       <!-- Demo Video -->
-      <div class="demoVideoContainer">
-        <!-- <h3>Join the counter revolution</h3>
-        <h1>Unlock the Power of Open Source</h1> -->
-        <h1>Join the [counter] revolution</h1>
-        <div class="demoVideo">
-          <iframe src="https://www.youtube.com/embed/VkUjuuu9I6g" title="Sophia d'Antoine introduces Reibase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-         </div>
-         <div class="videoText">
-          <div class="videoLeftText">
-            <span>
-              CEO Sophia d'Antoine introduces Reibase
-            </span>
-            <span class="videoSubText">
-              3 min
-            </span>
-            </div>
-          <div class="videoRightText">
-            <span>
-            Techstars_ Crypto Boston
-            </span>
-            <span class="videoSubText">
-              April 2023
-            </span>
-          </div>
-         </div>
-        </div>
+     <DemoVideo />
     <!-- Footer -->
       <Footer />
   </body>
