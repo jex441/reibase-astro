@@ -1,0 +1,136 @@
+.nav {
+    padding: 1rem 8rem .5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #FFF;
+    overflow: visible;
+}
+
+.nav ul li {
+    margin-bottom: .5rem;
+    font-size: 18px;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.nav ul li {
+    display: block;
+}
+
+.mobileNav {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.mobileMenu {
+    display: none;
+    background-image: url("/menu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    margin: 0 2rem 2rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.header {
+    width: 220px;
+    overflow: hidden;
+}
+
+.header img {
+    max-width: 190px;
+}
+
+@media (max-width: 854px) {
+    .nav {
+        padding: 1rem;
+        position: fixed;
+        top: -1px;
+    }
+
+    .header {
+        width: 220px;
+    }
+
+    .header img {
+        margin: 0;
+    }
+
+    .h1 {
+        font-size: 46px;
+        line-height: 50px;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+
+    .mobileNav {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        flex-direction: column;
+        width: 100vw;
+        align-items: flex-start;
+        display: flex;
+        background-color: #FFF;
+        height: 0;
+        transition: height 0ms;
+    }
+
+    .menu li a {
+        font-size: 28px;
+    }
+
+    .menu li,
+    a {
+        height: 0;
+        transition: height 0ms;
+    }
+
+    #menu-toggle:checked~.menu {
+        position: absolute;
+        transition: height 0ms;
+        height: 25vh;
+        background-color: #FFF;
+        width: 100vw;
+        display: flex;
+        box-shadow: 0 4px 8px -1px rgba(179, 179, 179, 0.1), 0 2px 8px -2px rgba(199, 199, 199, 0.1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        overflow: visible;
+        height: min-content;
+        transition: height 0ms;
+    }
+}
