@@ -80,7 +80,7 @@ a:active {
 
 .mobileMenu {
     display: none;
-    background-image: url("./menu.png");
+    background-image: url("/public/menu.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 24px;
@@ -114,7 +114,6 @@ a:active {
 
 .header img {
     max-width: 190px;
-    margin-bottom: .2rem;
 }
 
 .landing {
