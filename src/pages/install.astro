@@ -14,30 +14,6 @@ import "../styles/install.css";
     <title>Reibase</title>
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/install.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('user_kDFY4AFTuoji3GQqaGDsn');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('template_v1ulh7q').addEventListener('submit', function(event) {
-                event.preventDefault();
-                emailjs.sendForm('service_axjc80l', 'template_v1ulh7q', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                        document.getElementById("template_v1ulh7q").reset();
-                        document.querySelector(".success").style.display = "block";
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                        document.getElementById("success").style.display = "block";
-                        document.getElementById("success").innerText = "There was an error. Please try again.";
-                    });
-            });
-        }
-    </script>
-  </script>
   </head>
 
   <body>

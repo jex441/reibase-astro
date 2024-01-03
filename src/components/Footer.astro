@@ -34,29 +34,26 @@ import "../styles/footer.css";
 	  </span>
 </div>
 
-<style>
-	.footer-component {
-	font-size: 16px;
-    color: #ccc;
-    border-top: 1px solid #ccc;
-    padding: 2rem;
-	background-color: #1A181E;
- }
- .footer-component span{
-	font-family: 'Poppins', sans-serif;
-	padding:0 0px 0 10px;
- }
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
-</style>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+          emailjs.init('user_kDFY4AFTuoji3GQqaGDsn');
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('template_v1ulh7q').addEventListener('submit', function(event) {
+              event.preventDefault();
+              emailjs.sendForm('service_axjc80l', 'template_v1ulh7q', this)
+                  .then(function() {
+                      console.log('SUCCESS!');
+                      document.getElementById("template_v1ulh7q").reset();
+                      document.querySelector(".success").style.display = "block";
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                      document.getElementById("success").style.display = "block";
+                      document.getElementById("success").innerText = "There was an error. Please try again.";
+                  });
+          });
+      }
+  </script>
