@@ -424,8 +424,6 @@ a:active {
     .footer .copyright {
         font-size: 14px;
         color: #ccc;
-        margin: 1rem;
         border-top: 1px solid #ccc;
-        padding: 2rem;
     }
 }

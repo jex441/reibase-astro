@@ -1,0 +1,165 @@
+main {
+    width: 60%;
+    margin: 50px auto;
+    background-color: white;
+  }
+  
+  article {
+    border-bottom: 1px solid var(--lightgray);
+    margin-bottom: 30px;
+  }
+  
+  .hero-image {
+    width: 100%;
+  }
+  
+  .hero-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .prose {
+    width: 100%;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .prose p {
+    line-height: 38px;
+    font-size: 18px;
+  }
+  
+  .prose strong{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .title {
+    margin-bottom: 1em;
+  padding: 1em 0;
+  text-align: left;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid var(--lightgray);
+  }
+  
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+  
+  .date {
+    margin-bottom: 0.5em;
+    color: rgb(var(--gray));
+  }
+  
+  .last-updated-on {
+    font-style: italic;
+  }
+  
+  .blog {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 19rem 5rem 18rem;
+  }
+  
+  .blog article {
+    width: 100%;
+    min-height: 18rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .blogHeadline {
+    overflow: visible;
+    color: var(--dark);
+    font-size: 52px;
+    line-height: 60px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+  }
+  
+  .blogHeadline a {
+    overflow: visible;
+    color: var(--dark);
+    font-size: 52px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .blogHeadline a:hover {
+    color: #000;
+  }
+  
+  .author {
+    height: 4rem;
+    margin: 2rem 0rem 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .author span {
+    display: flex;
+    align-items: center;
+    object-fit: contain;
+    font-weight: 400;
+    font-size: 21px;
+  }
+  
+  .author span img {
+    margin-right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+  }
+  
+  p img{
+    width:400px;
+    margin:0 auto;
+  }
+  
+  .center-tsrc{
+    margin:0 auto;
+  }
+  
+  h2 {
+    margin-top: 3rem;
+  font-size: 26px;
+  font-weight: 600;
+  }
+
+  .description-line, time {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .blogSubhead {
+    font-size: 18px;
+    margin: 5px 0 5px 0;
+}
+
+  @media (max-width: 855px) {
+    main {
+        width: 95%;
+    }
+  
+    .title {
+        font-size: 36px;
+        line-height: 54px;
+        margin-top: 50px;
+    }
+    
+    .blogSubhead {
+        margin: 5px 0 5px 0;
+    }
+  }
