@@ -21,7 +21,7 @@ main {
   }
   
   .prose strong {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
   }
   
@@ -42,21 +42,24 @@ main {
   }
 
   .authorAndDate {
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: .5rem;
-    margin-bottom: 2rem;
-  }
+    margin: 1rem 0rem 3rem 0rem;
+    display: flex;
+    justify-content: space-between;
+   }
+
+   .authorAndDate span {
+       margin: 0;
+       font-family: "Poppins", sans-serif;
+       letter-spacing: 0.5px;
+       font-weight: 400;
+       font-size: 18px;
+   }
 
   .description {
     margin-bottom: .5rem;
-    font-size: 18px;
+    font-size: 22px;
   }
 
-  .date {
-    margin-bottom: 0.5em;
-    color: rgb(var(--gray));
-  }
 
   @media (max-width: 855px) {
     main {
@@ -67,5 +70,10 @@ main {
         font-size: 36px;
         line-height: 44px;
         margin-top: 50px;
+    }
+
+    .prose p {
+      font-size: 16px;
+      line-height: 32px;
     }
   }

@@ -56,13 +56,17 @@ border-bottom: 1px solid var(--lightgray);
  color: black;
  margin: 10px 0 20px 0;
 }
-.date {
- margin: 0;
- font-family: "Poppins", sans-serif;
- color: black;
- letter-spacing: 0.5px;
- font-weight: 400;
- font-size: 21px;
+.dateAndAuthor {
+ display: flex;
+ justify-content: space-between;
+}
+.dateAndAuthor span {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 21px;
 }
 .title-link{
  text-decoration: none;

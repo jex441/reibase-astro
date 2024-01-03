@@ -23,7 +23,10 @@ const { title, description, pubDate, updatedDate, heroImage, subText } = Astro.p
 			  <div class="prose">
 				<div class="blogHeader">
 				  <h1>{title}</h1>
-			  <span class="authorAndDate">{description} - ‎ <FormattedDate date={pubDate} /></span>
+			  <div class="authorAndDate">
+			  <span>{description}</span>
+			  <span>‎ <FormattedDate date={pubDate} /></span>
+			  </div>
 			  <span class="description">{subText}</span>
 				</div>
 				<slot class="content" />
