@@ -18,40 +18,12 @@
     width: 40%;
 }
 
-
-.getStartedButton {
-    cursor: pointer;
-    outline: none;
-    border: none;
-    font-size: 20px;
-    background: var(--primary);
-    margin-top: 4rem;
-    padding: .5rem 1rem .5rem 1rem;
-    color: white;
-    width: 180px;
-    height: 45px;
-    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.19);
-    border-radius: 4px;
-}
-
-.right {
-    display: flex;
-    align-items: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: 60%;
-}
-
-.landingVideo video {
-    border-radius: 10px;
-    width: 650px;
-    box-shadow: 10px 10px 100px 10px rgba(0, 0, 0, 0.25);
-}
 .intro h3 {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--secondary);
     margin-bottom: 1rem;
 }
+
 .intro h1 {
     color: var(--dark);
     font-size: 42px;
@@ -74,6 +46,36 @@
     margin: 1rem 0rem 1rem 0rem;
 }
 
+.getStartedButton {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background: var(--primary);
+    margin-top: 4rem;
+    padding: .5rem 1rem .5rem 1rem;
+    color: white;
+    width: 180px;
+    height: 45px;
+    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.landingVideo video {
+    border-radius: 10px;
+    width: 650px;
+    box-shadow: 10px 10px 100px 10px rgba(0, 0, 0, 0.25);
+}
+
 .mySlides {
     display: none;
   }
@@ -90,6 +92,7 @@
     letter-spacing: .6px;
     margin-top: 4rem;
 }
+
   .dot {
     width: 33%;
     cursor: pointer;
@@ -114,12 +117,12 @@
   }
 @media (max-width: 854px) {
     .landing {
-        height: 70vh;
+        height: 85vh;
         flex-direction: column;
         padding: 2rem;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-top: 8rem;
+        margin-top: 6rem;
         background-position: 10px 300px;
         background-repeat: no-repeat;
         background-size: contain;
@@ -133,6 +136,7 @@
     .intro {
         text-align: left;
         width: 100%;
+        margin-bottom: 1rem;
     }
 
     .intro h1 {
@@ -143,20 +147,25 @@
     .intro p {
         font-size: 14px;
         line-height: 22px;
+        margin-bottom: 1rem;
     }
-    .emailList {
+
+    .right {
+        align-content: center;
         width: 100%;
     }
+
     .landingVideo {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
         width: 100%;
+        margin: 0rem;
     }
     
-    .landingVideo div video {
-        border-radius: 10px;
-        width: 400px;
-        box-shadow: 10px 10px 100px 10px rgba(0, 0, 0, 0.25);
+    .landingVideo video {
+        width: 100%;
+    }
+
+    .dotsContainer {
+        margin-top: 1rem;
+        width: 100%;
     }
 }
