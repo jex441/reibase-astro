@@ -1,0 +1,162 @@
+.landing {
+    height: 90vh;
+    width: 100vw;
+    padding: 8rem 2rem 2rem 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url('/globe.png');
+    background-position: right 10px;
+    background-repeat: no-repeat;
+    background-size: 920px;
+    overflow: hidden;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+.getStartedButton {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background: var(--primary);
+    margin-top: 4rem;
+    padding: .5rem 1rem .5rem 1rem;
+    color: white;
+    width: 180px;
+    height: 45px;
+    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+
+.right {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.landingVideo video {
+    border-radius: 10px;
+    width: 650px;
+    box-shadow: 10px 10px 100px 10px rgba(0, 0, 0, 0.25);
+}
+.intro h3 {
+    font-size: 16px;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+.intro h1 {
+    color: var(--dark);
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 600;
+    margin-bottom: .75rem;
+}
+
+.intro .primary {
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--primary)
+}
+
+.intro p {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    color: var(--secondary);
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.mySlides {
+    display: none;
+  }
+
+.dotsContainer {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: .6px;
+    margin-top: 4rem;
+}
+  .dot {
+    width: 33%;
+    cursor: pointer;
+    height: 24px;
+    background-color: rgba(23, 23, 23, 0.7);
+    transition: background-color 0.6s ease;
+    margin: 1px;
+    padding: 3px;
+  }
+  
+  .active, .dot:hover {
+    background-color: rgba(23, 23, 23, 0.9);
+  }
+
+  .dotsContainer :nth-child(1){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .dotsContainer :nth-child(3){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+@media (max-width: 854px) {
+    .landing {
+        height: 70vh;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 8rem;
+        background-position: 10px 300px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow: hidden;
+    }
+
+    .getStartedButton {
+        display: none;
+    }
+
+    .intro {
+        text-align: left;
+        width: 100%;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .intro p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .emailList {
+        width: 100%;
+    }
+    .landingVideo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .landingVideo div video {
+        border-radius: 10px;
+        width: 400px;
+        box-shadow: 10px 10px 100px 10px rgba(0, 0, 0, 0.25);
+    }
+}
