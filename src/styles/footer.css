@@ -14,16 +14,16 @@
     min-height: 25rem;
 }
 
-.footer a {
+.footer ul li a {
     font-size: 18px;
     color: #ccc;
 }
 
-.footer a:hover {
+.footer ul li a:hover {
     color: #ccc;
 }
 
-.footer a:active {
+.footer ul li a:active {
     color: #ccc;
 }
 
