@@ -16,21 +16,21 @@ import "../../styles/landing.css";
         </div>
 
   <div class="right">
-        <div class="landingVideo mySlides">
+        <div class="landingVideo slide">
         <video autoplay muted>
         <source src="/create.mov" type="video/mp4">
         Your browser does not support the video tag.
         </video>
         </div>
 
-        <div class="landingVideo mySlides">
+        <div class="landingVideo slide">
         <video muted>
         <source src="/distribute.mov" type="video/mp4">
         Your browser does not support the video tag.
         </video>
         </div>
 
-                <div class="landingVideo mySlides">
+        <div class="landingVideo slide">
         <video muted>
         <source src="/vote.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -38,10 +38,10 @@ import "../../styles/landing.css";
         </div>
 
 
-        <div class="dotsContainer">
-          <span class="dot" onclick="clickHandler(0)">Load</span>
-          <span class="dot" onclick="clickHandler(1)">Distribute</span>
-          <span class="dot" onclick="clickHandler(2)">Vote</span>
+        <div class="barsContainer">
+          <span class="bar" onclick="clickHandler(0)">Load</span>
+          <span class="bar" onclick="clickHandler(1)">Distribute</span>
+          <span class="bar" onclick="clickHandler(2)">Vote</span>
         </div>
 
         </div>
@@ -54,19 +54,19 @@ let slideIndex = 0;
 showSlides();
 
 function clickHandler(n) {
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("slide");
     let currentSlide = slides[slideIndex]  
-    let dots = document.getElementsByClassName("dot");
+    let bars = document.getElementsByClassName("bar");
     let videos = document.getElementsByTagName("video");
 
     let currentVideo = videos[slideIndex]
-    let currentDot = dots[slideIndex];
+    let currentBar = bars[slideIndex];
 
     currentVideo.pause();
     currentVideo.load();
     currentVideo.autoplay = false;
     currentSlide.style.display = "none";
-    currentDot.classList.remove("active");
+    currentBar.classList.remove("active");
 
     slideIndex = n;
 
@@ -78,17 +78,17 @@ function showSlides() {
       slideIndex = 0
       }
 
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName("slide");
+  let bars = document.getElementsByClassName("bar");
   let videos = document.getElementsByTagName("video");
 
   let currentSlide = slides[slideIndex]  
-  let currentDot = dots[slideIndex];
+  let currentBar = bars[slideIndex];
   let currentVideo = videos[slideIndex]
 
 
   currentSlide.style.display = "block";
-  currentDot.classList.add("active");
+  currentBar.classList.add("active");
 
   currentVideo.autoplay = true;
   currentVideo.play()
@@ -98,7 +98,7 @@ function showSlides() {
     currentVideo.load();
     currentVideo.autoplay = false;
     currentSlide.style.display = "none";
-    currentDot.classList.remove("active");
+    currentBar.classList.remove("active");
     slideIndex+=1
     showSlides()
   }

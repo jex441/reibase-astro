@@ -75,11 +75,11 @@
     box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.25);
 }
 
-.mySlides {
+.slide {
     display: none;
   }
 
-.dotsContainer {
+.barsContainer {
     width: 650px;
     display: flex;
     align-items: center;
@@ -88,11 +88,11 @@
     text-align: center;
     color: #fff;
     font-size: 16px;
-    letter-spacing: .6px;
+    letter-spacing: .7px;
     margin-top: 4rem;
 }
 
-  .dot {
+  .bar {
     width: 33%;
     cursor: pointer;
     height: 24px;
@@ -102,15 +102,15 @@
     padding: 3px;
   }
   
-  .active, .dot:hover {
+  .active, .bar:hover {
     background-color: rgba(23, 23, 23, 0.9);
   }
 
-  .dotsContainer :nth-child(1){
+  .barsContainer :nth-child(1){
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
-  .dotsContainer :nth-child(3){
+  .barsContainer :nth-child(3){
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
@@ -164,7 +164,7 @@
         height: auto;
     }
 
-    .dotsContainer {
+    .barsContainer {
         margin-top: 1rem;
         width: 100%;
     }
