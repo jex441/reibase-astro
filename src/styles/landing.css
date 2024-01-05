@@ -1,7 +1,7 @@
 .landing {
     height: 90vh;
     width: 100vw;
-    padding: 8rem 2rem 2rem 10rem;
+    padding: 6rem 2rem 2rem 8rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,13 +15,13 @@
 .intro {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 35%;
 }
 
 .intro h3 {
     font-size: 18px;
     color: var(--secondary);
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .intro h1 {
@@ -39,7 +39,7 @@
 }
 
 .intro p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 30px;
     font-weight: 300;
     color: var(--secondary);
@@ -65,13 +65,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
 }
 
 .landingVideo video {
     border-radius: 10px;
     width: 650px;
-    box-shadow: 10px 10px 100px 10px rgba(0, 0, 0, 0.25);
+    height: 368px;
+    box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.25);
 }
 
 .mySlides {
@@ -160,6 +161,7 @@
     
     .landingVideo video {
         width: 100%;
+        height: auto;
     }
 
     .dotsContainer {
