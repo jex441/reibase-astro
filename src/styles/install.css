@@ -30,9 +30,10 @@
 }
 
 .leftSection img {
-    width: 200px;
+    width: 160px;
     position: fixed;
     top: 2rem;
+    left: 4rem;
 }
 
 .leftSection h1 {

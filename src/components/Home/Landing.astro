@@ -1,11 +1,108 @@
+---
+import "../../styles/style.css";
+import "../../styles/landing.css";
+---
     <section class="landing">
       <div class="intro">
-        <span class="h1">
-          The future of open source infrastructure
-        </span>
+      <h3>Introducing Reibase</h3>
+        <h1>
+          The future of <span class="primary">open source</span> infrastructure
+        </h1>
         <p>
           Reibase provides a way to monetize open source projects, clearly define control of the project, and reward contributors giving back to the community.
         </p>
-        <a href="/install/"><button type="button" class="button">Get Started</button></a>
+
+        <a href="/install/"><button type="button" class="getStartedButton">Get Started</button></a>
+        </div>
+
+  <div class="right">
+        <div class="landingVideo slide">
+        <video autoplay muted>
+        <source src="/create.mov" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        </div>
+
+        <div class="landingVideo slide">
+        <video muted>
+        <source src="/distribute.mov" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        </div>
+
+        <div class="landingVideo slide">
+        <video muted>
+        <source src="/vote.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        </div>
+
+
+        <div class="barsContainer">
+          <span class="bar" onclick="clickHandler(0)">Load</span>
+          <span class="bar" onclick="clickHandler(1)">Distribute</span>
+          <span class="bar" onclick="clickHandler(2)">Vote</span>
+        </div>
+
         </div>
     </section>
+
+
+    <script type="text/javascript">
+    
+let slideIndex = 0;
+showSlides();
+
+function clickHandler(n) {
+    let slides = document.getElementsByClassName("slide");
+    let currentSlide = slides[slideIndex]  
+    let bars = document.getElementsByClassName("bar");
+    let videos = document.getElementsByTagName("video");
+
+    let currentVideo = videos[slideIndex]
+    let currentBar = bars[slideIndex];
+
+    currentVideo.pause();
+    currentVideo.load();
+    currentVideo.autoplay = false;
+    currentSlide.style.display = "none";
+    currentBar.classList.remove("active");
+
+    slideIndex = n;
+
+  showSlides();
+} 
+
+function showSlides() {
+      if(slideIndex > 2) { 
+      slideIndex = 0
+      }
+
+  let slides = document.getElementsByClassName("slide");
+  let bars = document.getElementsByClassName("bar");
+  let videos = document.getElementsByTagName("video");
+
+  let currentSlide = slides[slideIndex]  
+  let currentBar = bars[slideIndex];
+  let currentVideo = videos[slideIndex]
+
+
+  currentSlide.style.display = "block";
+  currentBar.classList.add("active");
+
+  currentVideo.autoplay = true;
+  currentVideo.play()
+
+  currentVideo.onended = function() {
+    currentVideo.pause();
+    currentVideo.load();
+    currentVideo.autoplay = false;
+    currentSlide.style.display = "none";
+    currentBar.classList.remove("active");
+    slideIndex+=1
+    showSlides()
+  }
+
+}
+
+</script>
