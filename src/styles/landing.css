@@ -118,7 +118,7 @@
     .landing {
         height: 85vh;
         flex-direction: column;
-        padding: 2rem;
+        padding: 1rem;
         justify-content: flex-start;
         align-items: flex-start;
         margin-top: 6rem;
@@ -136,6 +136,10 @@
         text-align: left;
         width: 100%;
         margin-bottom: 1rem;
+    }
+
+    .intro h3 {
+        font-size: 14px;
     }
 
     .intro h1 {
