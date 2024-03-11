@@ -14,9 +14,9 @@ body {
 
 :root {
     --primary: var(--violet);
-    --violet: #3c18b3;
+    --violet: #5B21B6;
     --blue: #5200FF;
-    --secondary: #6A6868;
+    --secondary: #6B7280;
     --lightgray: #D4D4D4;
     --dark: #1A181E;
     --green: #22c55e;
