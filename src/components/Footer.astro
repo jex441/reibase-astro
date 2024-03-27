@@ -1,37 +1,54 @@
 ---
 const currentYear = new Date().getFullYear();
-import "../styles/footer.css";
 ---
-<div class="footer">
- <div class="wrapper">
-        <div>
-          <a href="/"><img src="/logowhite.png" /></a>
+
+<div class="w-full h-[500px] flex flex-col p-12 bg-black text-white">
+ <div class="w-full flex flex-row justify-between">
+        <div class="flex flex-row w-1/3 gap-14">
+          <div>
+            <a href="/">
+              <img src="/logowhite.png" />
+            </a>
+          </div>
+
+           <div class="flex flex-col gap-2">
+            <span class="text-[18px]">
+              <a href="/instal" class="text-white hover:underline hover:text-white">Install</a>
+            </span>
+          <span class="text-[18px]">
+            <a href="/team" class="text-white hover:underline hover:text-white">Discord</a>
+          </span>
+        <span class="text-[18px]">
+          <a href="/blog" class="text-white hover:underline hover:text-white">
+            Blog
+          </a>
+        </span>
+        </div>
         </div>
         <div>
-        <ul>
-          <li>
-            <a href="/install/">Install</a>
-            </li>
-          <li>
-          <a href="/team/">Team</a>
-          </li>
-        <li><a href="/blog/">Blog</a>
-        </li>
-        </ul>
+       
       </div>
-      <div>
-        <form class="emailList" name="demo-form" id="template_v1ulh7q">
-          <label for="demo-form">Book a demo</label>
-          <input type="text" placeholder="Name" name="from_name">
-          <input type="email" placeholder="Email Address" name="reply_to" />
-          <button type="submit" class="demoButton">Submit</button>
+      <div class="w-1/3">
+        <form class="flex flex-col gap-3 items-start" name="demo-form" id="template_v1ulh7q">
+          <label for="demo-form" class="text-[24px] underline">Book a demo</label>
+        <div>If you are interested in learning more book a demo with one of our team and we will happily introduce you to Solaris.</div>
+          <label for="from_name" class="text-white">Your Name</label>
+          <input class="w-3/4 p-2 bg-black outline-white border-white border" type="text" name="from_name">
+          <label for="reply_to" class="text-white">Your Email</label>
+          <input class="w-3/4 p-2 bg-black outline-white border-white border" type="email" name="reply_to" />
+          <button type="submit" class="bg-black border border-white my-3 px-6 py-2 text-white">Submit</button>
           <div class="success">Thank you - we will be in touch shortly.</div>
         </form>
       </div>
     </div>
-      <span class="copyright">
-	  Copyright © {currentYear} Reibase
-	  </span>
+      <div class="w-full flex flex-col gap-2 justify-end h-40">
+	  <span class="underline text-[16px]">
+      Based in NYC
+    </span>
+    <span class="text-gray-400">
+      Copyright © {currentYear} Reibase
+    </span>
+	  </div>
 </div>
 
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
