@@ -1,109 +1,26 @@
 ---
 import "../../styles/style.css";
-import "../../styles/landing.css";
+import "../../styles/style.css";
 ---
     <section class="landing">
       <div class="intro">
-      <h3>Introducing Reibase</h3>
-        <h1>
-          The future of <span class="primary">open source</span> infrastructure
-        </h1>
-        <p>
-          Reibase provides a way to monetize open source projects, clearly define control of the project, and reward contributors giving back to the community.
-        </p>
+      <h1>Down vote mediocrity.<br /> Up vote quality collaborators making cool stuff.</h1>
+      <p>
+        Get your backlog of pull requests unstuck, reward your best contributors, and foster community around your project.
+      </p>
 
-   <a href="https://solaris.reibase.rs"><button type="button" class="getStartedButton">Try it now<img src="/rightarrow.png" /></button></a>
-        <div class="techstars">Backed by <img class="techstarslogo" src="/techstarslogo.png" /></div>
-        </div>
-
-  <div class="right">
-        <div class="landingVideo slide">
-        <video autoplay muted playsinline poster="/poster.png">
-        <source src="/create.mov" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
-        </div>
-
-        <div class="landingVideo slide">
-        <video muted playsinline poster="/poster.png" loading="lazy">
-        <source src="/distribute.mov" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
-        </div>
-
-        <div class="landingVideo slide">
-        <video muted playsinline poster="/poster.png" loading="lazy">
-        <source src="/vote.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
-        </div>
-
-
-        <div class="barsContainer">
-          <span class="bar" onclick="clickHandler(0)">Load</span>
-          <span class="bar" onclick="clickHandler(1)">Distribute</span>
-          <span class="bar" onclick="clickHandler(2)">Vote</span>
-        </div>
-
-        </div>
-    </section>
-
-
-    <script type="text/javascript">
-    
-let slideIndex = 0;
-showSlides();
-
-function clickHandler(n) {
-    let slides = document.getElementsByClassName("slide");
-    let currentSlide = slides[slideIndex]  
-    let bars = document.getElementsByClassName("bar");
-    let videos = document.getElementsByTagName("video");
-
-    let currentVideo = videos[slideIndex]
-    let currentBar = bars[slideIndex];
-
-    currentVideo.pause();
-    currentVideo.load();
-    currentVideo.autoplay = false;
-    currentSlide.style.display = "none";
-    currentBar.classList.remove("active");
-
-    slideIndex = n;
-
-  showSlides();
-} 
-
-function showSlides() {
-      if(slideIndex > 2) { 
-      slideIndex = 0
-      }
-
-  let slides = document.getElementsByClassName("slide");
-  let bars = document.getElementsByClassName("bar");
-  let videos = document.getElementsByTagName("video");
-
-  let currentSlide = slides[slideIndex]  
-  let currentBar = bars[slideIndex];
-  let currentVideo = videos[slideIndex]
-
-
-  currentSlide.style.display = "block";
-  currentBar.classList.add("active");
-
-  currentVideo.autoplay = true;
-  currentVideo.play()
-
-  currentVideo.onended = function() {
-    currentVideo.pause();
-    currentVideo.load();
-    currentVideo.autoplay = false;
-    currentSlide.style.display = "none";
-    currentBar.classList.remove("active");
-    slideIndex+=1
-    showSlides()
-  }
-
-}
-
-</script>
+<div class="buttons">
+<span class="tryBtn">
+  Try it free
+  <span>
+    <img src="/tryBtnimg.png" />
+  </span>
+</span>
+<span class="learnBtn">
+  Learn More
+</span>
+</div>
+<span class="techstars">Backed by Techstars_</span>
+<div class="upArrowsLanding"></div>
+<div class="downArrowsLanding"></div>
+</section>

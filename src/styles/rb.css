@@ -1,0 +1,35 @@
+.rb {
+    background-color: #4A56E9;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.blue .black {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.blue {
+    transform: translateZ(-5px) scale(1.5);
+}
+
+.black {
+    transform: translateZ(-10px) scale(2);
+}

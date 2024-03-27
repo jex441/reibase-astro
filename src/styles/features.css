@@ -1,0 +1,42 @@
+.features {
+    background-color: #092A35;
+    color: #FFC785;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    gap: 2;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.text h1 {
+    font-size: 22px;
+    line-height: 38px;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.text p {
+    line-height: 25px;
+    font-family: "Source Serif 4";
+}
