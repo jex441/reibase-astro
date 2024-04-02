@@ -3,13 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     scroll-behavior: smooth;
 }
 
 body {
+    background-color: #103C42;
     overflow-x: hidden;
-    font-weight: 200;
 }
 
 .serif {
@@ -20,4 +20,12 @@ body {
 .serif-light {
     font-family: "Source Serif 4";
     font-weight: 300;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.fixed {
+    position: fixed;
 }

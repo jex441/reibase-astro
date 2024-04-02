@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: hidden;
 }
 
 .intro {
@@ -80,22 +81,22 @@
     margin-top: 3rem;
     color: #D1DBBD;
     border-bottom: 2px solid #D1DBBD;
-    padding-bottom: 1px;
     width: fit-content;
 }
+
 .downArrowsLanding {
     background-image: url("../downarrowlanding.png");
     background-repeat: repeat-y;
     position: absolute;
     background-position: center;
-    right: 50px;
+    right: 40px;
     top: 0px;
     background-size: contain;
     display: block;
     height: 100%;
     overflow: hidden;
-    width: 50px;
-    z-index: 10;
+    width: 40px;
+    z-index: 5;
 }
 
 .upArrowsLanding {
@@ -107,12 +108,60 @@
     top: 0px;
     background-size: contain;
     display: block;
-    height: 120vh;
-    width: 50px;
+    width: 40px;
     height: 100%;
     overflow: hidden;
-    z-index: 10;
+    z-index: 5;
 }
 @media (max-width: 854px) {
+.landing {
+    overflow:hidden;
+    min-height: 40vh;
+    max-height: 80vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.intro {
+    width: 70%;
+}
+
+.intro h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.tryBtn {
+    font-size: 14px;
+    padding: 0;
+}
+
+.tryBtn img {
+    height: 16px;
+}
+
+.learnBtn {
+    padding: 0;
+    font-size: 14px;
+}
+
+.downArrowsLanding {
+    right: 5px;
+    width: 40px;
+    height: 95vh;
+}
+
+.upArrowsLanding {
+    right: 45px;
+    width: 40px;
+    height: 95vh;
+}
 
 }

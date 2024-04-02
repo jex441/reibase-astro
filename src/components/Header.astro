@@ -1,29 +1,65 @@
----
-import { SITE_TITLE } from '../consts';
-import "../styles/nav.css";
----
-<nav class="nav">
-	<header class="header">
-	  <a href="/"><img src="/rei[base].png" /></a>
-	</header>
-   </span>
+	<nav class="fixed h-[90px] z-20 top-0 w-screen px-4 flex justify-between items-center">
+		<div class="w-1/2">
+			<a class="" href="#">
+				<img class="logo" src="rei[base].png" />
+			</a>
+		</div>	
 
-  <!-- Menu -->
-  <input id="menu-toggle" type="checkbox" />
-  <label class='menu-button-container' for="menu-toggle">
-	<div class='mobileMenu'></div>
-  </label>
-	<ul class="menu">
-	  <li>
-		<a href="https://solaris.reibase.rs/">Get Started</a>
-	  </li>
-	<li>
-	  <a href="/blog/">Blog</a>
-	</li>
-	<li>
-	  <!-- <img src="./discord.png"/> -->
-	</li>
-   </ul>
-   <div class="navbg"></div>
-  </nav>
+		<div class="navbar-burger flex justify-end lg:hidden">
+			<img class="burger-img w-8" src="menusaffron.png" />
+		</div>
 
+		<ul class="navbar-menu gap-10 hidden absolute top-[120px] lg:w-2/5 lg:flex lg:flex-row lg:justify-end lg:top-1/2 lg:left-1/2 transform">
+			<li><a class="nav-link text-[#FFFBE0] visited:text-[#FFFBE0] visited:hover:text-[#FFFBE0] hover:underline text-[45px] lg:text-[22px]" href="https://solaris.reibase.rs">Get Started</a></li>
+			<li><a class="nav-link text-[#FFFBE0] visited:hover:text-[#FFFBE0] hover:text-[#FFFBE0] hover:underline text-[45px] lg:text-[22px]" href="/discord">Discord</a></li>
+		</ul>
+	</nav>
+	
+		<div class="nav-bg transition-all block fixed left-0 top-0 w-screen h-[100px] bg-[#103C42]/50 backdrop-blur-sm z-10"></div>
+
+		<div class="mobile-menu-bg hidden fixed top-0 z-10 w-screen h-screen bg-black/90 z-10"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.navbar-burger');
+    const menu = document.querySelector('.navbar-menu');
+    const menubg = document.querySelector('.mobile-menu-bg');
+
+    // Open/close mobile nav:
+            burger.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                    menubg.classList.toggle('hidden');
+			})
+
+    });
+
+        document.addEventListener('scroll', function () {
+            const navbg = document.querySelector('.nav-bg');
+            const navLink = document.querySelectorAll('.nav-link');
+            const logo = document.querySelector('.logo');
+            const burgerImg = document.querySelector('.burger-img');
+
+            if(window.scrollY > 700) {
+                navbg.classList.add('bg-black')
+                logo.src = "rei[base]white.png";
+                burgerImg.src = "menuwhite.png";
+                
+                for (let i = 0; i < navLink.length; i++){
+                    navLink[i].classList.add('text-white')
+                    navLink[i].classList.add('visited:text-white')
+                    navLink[i].classList.add('hover:text-white')
+                    navLink[i].classList.add('visited:hover:text-white')
+                }
+            } else {
+                navbg.classList.remove('bg-black')
+                logo.src = "rei[base].png";
+                 for (let i = 0; i < navLink.length; i++){
+                    navLink[i].classList.remove('text-white')
+                    navLink[i].classList.remove('visited:text-white')
+                    navLink[i].classList.remove('hover:text-white')
+                    navLink[i].classList.remove('visited:hover:text-white')
+                }
+            }
+        })
+
+</script>
