@@ -1,11 +1,23 @@
 ---
 import "../../styles/rb.css";
 ---
-    <section class="rb z-100">
+    <section class="rb">
     <div class="wrapper">
-    <div class="perspective">
-    <img src="bluerb.png" class="blue" />
-    <img src="blackrb.png" class="black" />
+    <div class="blue"><img src="bluerb.png"  /></div>
+    <div class="black"><img src="blackrb.png"  /></div>
     </div>
-</div>
 </section>
+
+<script>
+window.addEventListener('scroll', function(e) {
+    
+    const black = document.querySelector('.black');
+    const blue = document.querySelector('.blue');
+
+    let scrolled = window.pageYOffset;
+    let rate = scrolled * .05;
+
+    black.style.transform = `translate3d(0px, ${rate}px, 0px)`;
+
+})
+</script>
