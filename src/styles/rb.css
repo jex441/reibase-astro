@@ -34,6 +34,7 @@
 
 .black {
     z-index: -10;
+    left: 160px;
     top: 50px;
 }
 
@@ -43,6 +44,8 @@
         top: 100px;
     }
     .black {
-        top: 0px;
+        top: -10px;
+        left: -20px;
+
     }
 }

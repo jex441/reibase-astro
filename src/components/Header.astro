@@ -1,5 +1,5 @@
 	<nav class="fixed h-[100px] z-20 top-0 w-screen px-4 flex justify-between items-center">
-		<div class="lg:ml-12">
+		<div class="logo lg:ml-12">
 			<a class="" href="/">
 				<img src="rei[base].png" />
 			</a>
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const navLink = document.querySelectorAll('.nav-link');
             const logo = document.querySelector('.logo');
             const burgerImg = document.querySelector('.burger-img');
-
-            if(window.scrollY > 500) {
+            
+            if(window.scrollY > 600) {
                 navbg.classList.add('bg-black')
                 logo.src = "rei[base]white.png";
                 burgerImg.src = "menuwhite.png";
