@@ -40,6 +40,7 @@
 @media (max-width: 854px) {
     .rb {
         height: 30vh;
+        top: 100px;
     }
     .black {
         top: 10px;

@@ -15,9 +15,9 @@ window.addEventListener('scroll', function(e) {
     const blue = document.querySelector('.blue');
 
     let scrolled = window.pageYOffset;
-    let rate = scrolled * .05;
+    let rate = scrolled * .02;
 
     black.style.transform = `translate3d(0px, ${rate}px, 0px)`;
-
+    blue.style.transform = `translate3d(0px, -${rate}px, 0px)`;
 })
 </script>
