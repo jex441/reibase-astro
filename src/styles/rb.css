@@ -1,9 +1,18 @@
 .rb {
     background-color: #4A56E9;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
+    z-index: -20;
+    position: sticky;
+    top: 0;
+}
+
+.perspective {
+    height: 100%;
+    width: 100%;
+    position: relative;
     perspective: 10px;
 }
 
@@ -12,24 +21,41 @@
     width: 100%;
     transform-style: preserve-3d;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: -1;
 }
 
-.blue .black {
-    z-index: -1;
+.blue  {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    top: 50px;
+    left: 250px;
+    z-index: -5;
 }
 
-/* .blue {
+.black {
+    position: absolute;
+    z-index: -10;
+    top: 150px;
+    left: 200px;
+}
+
+.blue {
     transform: translateZ(-5px) scale(1.5);
 }
 
 .black {
     transform: translateZ(-10px) scale(2);
-} */
+}
+
+@media (max-width: 854px) {
+    .rb {
+        height: 40vh;
+    }
+    .black {
+        top: 40px;
+        left: 0px;
+    }
+    .blue{
+        top: 10px;
+        left: 20px;
+    }
+}

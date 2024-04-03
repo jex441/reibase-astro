@@ -1,23 +1,23 @@
-	<nav class="fixed h-[90px] z-20 top-0 w-screen px-4 flex justify-between items-center">
-		<div class="w-1/2">
-			<a class="" href="#">
-				<img class="logo" src="rei[base].png" />
+	<nav class="fixed h-[100px] z-20 top-0 w-screen px-4 flex justify-between items-center">
+		<div class="lg:ml-12">
+			<a class="" href="/">
+				<img src="rei[base].png" />
 			</a>
 		</div>	
 
-		<div class="navbar-burger flex justify-end lg:hidden">
+		<div class="navbar-burger lg:hidden">
 			<img class="burger-img w-8" src="menusaffron.png" />
 		</div>
 
-		<ul class="navbar-menu gap-10 hidden absolute top-[120px] lg:w-2/5 lg:flex lg:flex-row lg:justify-end lg:top-1/2 lg:left-1/2 transform">
-			<li><a class="nav-link text-[#FFFBE0] visited:text-[#FFFBE0] visited:hover:text-[#FFFBE0] hover:underline text-[45px] lg:text-[22px]" href="https://solaris.reibase.rs">Get Started</a></li>
-			<li><a class="nav-link text-[#FFFBE0] visited:hover:text-[#FFFBE0] hover:text-[#FFFBE0] hover:underline text-[45px] lg:text-[22px]" href="/discord">Discord</a></li>
-		</ul>
+		<div class="navbar-menu gap-2 hidden flex-col absolute top-[120px] lg:top-auto lg:gap-10 lg:w-1/3 lg:flex lg:relative lg:flex-row transform-all">
+			<span><a class="nav-link text-[#FFFBE0] visited:text-[#FFFBE0] visited:hover:text-[#FFFBE0] hover:underline text-[45px] lg:text-[22px]" href="https://solaris.reibase.rs" target="_blank">Get Started</a></span>
+			<span><a class="nav-link text-[#FFFBE0] visited:hover:text-[#FFFBE0] hover:text-[#FFFBE0] hover:underline text-[45px] lg:text-[22px]" href="https://discord.gg/8w4M3hRtVN" target="_blank">Join the conversation</a></span>
+		</div>
 	</nav>
 	
-		<div class="nav-bg transition-all block fixed left-0 top-0 w-screen h-[100px] bg-[#103C42]/50 backdrop-blur-sm z-10"></div>
+		<div class="nav-bg transition block fixed left-0 top-0 w-screen h-[100px] bg-[#103C42]/50 backdrop-blur-sm z-10"></div>
 
-		<div class="mobile-menu-bg hidden fixed top-0 z-10 w-screen h-screen bg-black/90 z-10"></div>
+		<div class="mobile-menu-bg hidden fixed top-0 w-screen h-screen bg-black/90 z-10 backdrop-blur-sm"></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Open/close mobile nav:
             burger.addEventListener('click', function() {
                     menu.classList.toggle('hidden');
+                    menu.classList.toggle('flex');
                     menubg.classList.toggle('hidden');
 			})
 
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navbg.classList.add('bg-black')
                 logo.src = "rei[base]white.png";
                 burgerImg.src = "menuwhite.png";
-                
+
                 for (let i = 0; i < navLink.length; i++){
                     navLink[i].classList.add('text-white')
                     navLink[i].classList.add('visited:text-white')
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     navLink[i].classList.add('visited:hover:text-white')
                 }
             } else {
+                burgerImg.src = "menusaffron.png";
                 navbg.classList.remove('bg-black')
                 logo.src = "rei[base].png";
                  for (let i = 0; i < navLink.length; i++){
