@@ -7,7 +7,7 @@
     perspective: 10px;
     z-index: -1;
     position: sticky;
-    top: 0px;
+    top: 200px;
 }
 
 .wrapper {
@@ -43,6 +43,6 @@
         top: 100px;
     }
     .black {
-        top: 10px;
+        top: 0px;
     }
 }
