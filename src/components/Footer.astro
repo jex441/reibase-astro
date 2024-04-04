@@ -61,6 +61,10 @@ const currentYear = new Date().getFullYear();
                       console.log('SUCCESS!');
                       document.getElementById("template_v1ulh7q").reset();
                       document.querySelector(".success").style.display = "block";
+                      
+                      setTimeout(()=>{
+                        document.querySelector(".success").style.display = "none";
+                      }, [4000])
                   }, function(error) {
                       console.log('FAILED...', error);
                       document.getElementById("success").style.display = "block";

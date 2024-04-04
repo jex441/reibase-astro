@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const burgerImg = document.querySelector('.burger-img');
             
             if(window.scrollY > 600) {
-                navbg.classList.add('bg-black')
+                navbg.classList.add('bg-black');
                 logo.src = "rei[base]white.png";
                 burgerImg.src = "menuwhite.png";
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } else {
                 burgerImg.src = "menusaffron.png";
-                navbg.classList.remove('bg-black')
+                navbg.classList.remove('bg-black');
                 logo.src = "rei[base].png";
                  for (let i = 0; i < navLink.length; i++){
                     navLink[i].classList.remove('text-white')
