@@ -1,0 +1,51 @@
+.rb {
+    background-color: #4A56E9;
+    height: 60vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    perspective: 10px;
+    z-index: -1;
+    position: sticky;
+    top: 100px;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -100;
+}
+
+
+.black, .blue {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+}
+
+.blue {
+    z-index: -5;
+    top: 0px;
+}
+
+.black {
+    z-index: -10;
+    left: 160px;
+    top: 50px;
+}
+
+@media (max-width: 854px) {
+    .rb {
+        height: 30vh;
+        top: 100px;
+    }
+    .black {
+        top: -10px;
+        left: -20px;
+
+    }
+}

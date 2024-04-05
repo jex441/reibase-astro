@@ -1,0 +1,75 @@
+---
+import "../../styles/style.css";
+---
+    <section id="introducing" class="min-h-screen w-screen px-2 py-10 lg:p-4 lg:px-10 text-[#27253D] bg-[#F6FFCA] flex flex-col">
+        <div class="hidden lg:flex flex-row justify-end items-center my-8 mx-12">
+         <a href="https://github.com/reibase" target="_blank">
+            <span class="lg:flex flex-row space-between h-12 w-content gap-2 text-[16px] border border-[#2A014B] text-[#2A014B] items-center py-1 px-4 cursor-pointer">View us on GitHub<img src="introgithub.png" /></span>
+         </a>
+       </div>
+
+    <div class="flex w-full flex-col-reverse lg:flex-row lg:space-between">
+        <div class="w-full lg:w-2/6 flex flex-col gap-2 lg:ml-6">
+            <h1 class="serif text-[22px] text-[#2A014B]" >Introducing Solaris</h1>
+                <p class="leading-7 text-[#2A014B] mb-2">
+                    Solaris is a platform for distributing a quantifiable amount of influence in a code base or project. These are referred to as credits. By assigning credits based on the quality and quantity of contributions, project maintainers can foster a collaborative environment where contributors feel valued and motivated to engage actively.
+                </p>
+                <h1 class="serif text-[22px] text-[#2A014B]">
+                    Multi Party Development
+                </h1>
+                <p class="leading-7 text-[#2A014B] mb-2">
+                    Credits can be applied to proposed changes to the project thus enabling maintainers to strategically distribute influence, ensuring that key stakeholders have the appropriate level of input in decision-making processes.
+                </p>
+                <h1 class="serif text-[22px] text-[#2A014B]">
+                    Project Sustainability
+                </h1>
+                <p class="leading-7 text-[#2A014B]">
+                    Ultimately, customizable credit allocation promotes transparency, accountability, and efficiency in project management, driving the success and sustainability of the project.
+                </p>
+        </div>
+
+        <div class="w-full relative lg:w-4/6 flex flex-row object-contain items-center justify-end">
+            <img class="mobile-screen hidden lg:block absolute top-[100px] right-[600px] h-[320px]" src="solarisscreenshotmobile1.png" />
+            <img class="h-auto lg:h-[450px]" src="solarisscreenshot1.png" />
+        </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row justify-start items-center lg:mx-6 w-full h-40">
+    <div class="w-full mb-2 lg:mb-0 lg:w-1/2">
+        <a href="https://solaris.reibase.rs" target="_blank">
+
+            <div class="cursor-pointer flex items-center justify-center gap-6 my-4 lg:my-0 text-[#F6FFCA] bg-[#27253D] w-[174px] h-[44px]">
+                <span class="text-[18px]">Try Solaris</span>
+            <span>
+                <img src="externalintroducing.png" />
+            </span>
+         </div>
+        </a>
+
+    </div>
+    <span class="text-[#2A014B] w-full flex flex-row lg:items-center justify-around underline lg:w-2/3">
+
+    <span class="w-2/3 text-[18px] leading-10 lg:text-[22px] lg:w-auto">
+        Integrates with GitHub, Gitlab, and more to come.
+    </span>
+
+    <span class="flex flex-row">
+        <img class="w-10 h-10 lg:h-14 lg:w-14" src="githubintroducing.png" />
+        <img class="w-10 h-10 lg:h-14 lg:w-14" src="gitlabintroducing.png" /></span>
+    </span>
+
+    </div>
+</div>
+</section>
+
+<script>
+window.addEventListener('scroll', function(e) {
+    
+    const mobileScreen = document.querySelector('.mobile-screen');
+
+    let scrolled = window.pageYOffset;
+    let rate = scrolled * .01;
+
+    mobileScreen.style.transform = `translate3d(0px, -${rate}px, 0px)`;
+})
+</script>

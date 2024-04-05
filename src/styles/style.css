@@ -3,84 +3,29 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 400;
     scroll-behavior: smooth;
 }
 
 body {
+    background-color: #103C42;
     overflow-x: hidden;
 }
 
-:root {
-    --primary: var(--violet);
-    --violet: #5B21B6;
-    --blue: #5200FF;
-    --secondary: #6B7280;
-    --lightgray: #D4D4D4;
-    --dark: #1A181E;
-    --green: #22c55e;
-    --lightblue: #a2d9ff;
-    --light: #f3f4f6;
-    --lightbg: #f1f5f9;
+.serif {
+    font-family: "Source Serif 4";
+    font-weight: 400;
 }
 
-a {
-    font-size: inherit;
-    text-decoration: none;
-    color: var(--primary);
-}
-
-a:hover {
-    color: var(--dark);
+.serif-light {
+    font-family: "Source Serif 4";
+    font-weight: 300;
 }
 
 a:visited {
-    color: var(--dark);
+    color: inherit;
 }
 
-a:visited:hover {
-    color: var(--dark);
-}
-
-a:active {
-    color: var(--dark);
-}
-
-.emailList {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 4rem;
-}
-
-.emailList label {
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 2rem;
-}
-
-.emailList span {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.emailList input {
-    border: 1px solid var(--secondary);
-    padding: 1rem;
-    margin: .5rem 0rem 0rem 0;
-}
-
-.demoButton {
-    cursor: pointer;
-    outline: none;
-    border: none;
-    font-size: 20px;
-    background-color: var(--blue);
-    margin-top: 2rem;
-    padding: .5rem 1rem .5rem 1rem;
-    color: white;
-    width: 180px;
-    height: 45px;
+.fixed {
+    position: fixed;
 }

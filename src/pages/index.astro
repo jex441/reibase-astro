@@ -3,9 +3,11 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Landing from '../components/Home/Landing.astro';
-import UseCases from '../components/Home/UseCases.astro';
-import HomeTeam from '../components/Home/HomeTeam.astro';
-import DemoVideo from '../components/Home/DemoVideo.astro';
+import RB from '../components/Home/RB.astro';
+import Introducing from '../components/Home/Introducing.astro';
+import Features from '../components/Home/Features.astro';
+import FAQ from '../components/Home/FAQ.astro';
+
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 <!DOCTYPE html>
@@ -16,25 +18,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reibase</title>
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/usecases.css" />
-    <link rel="stylesheet" href="styles/hometeam.css" />
-    <link rel="stylesheet" href="styles/demoVideo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
   </head>
   
   <body>
     <!-- Nav -->
-    <Header/>
-
+    <Header class="fixed" />
+    
     <!-- Content -->
     <Landing />
 
-    <!-- Use Cases / Features -->
-    <UseCases />
-    
-      <!-- Team -->
+    <!-- RB -->
+    <RB />
 
-    <!-- Demo Video -->
-     <DemoVideo />
+    <!-- Use Cases / Features -->
+    <Introducing />
+
+      <!-- Use Cases / Features -->
+    <Features />
+    
+       <!-- FAQ -->
+    <FAQ />
 
     <!-- Footer -->
     <Footer />

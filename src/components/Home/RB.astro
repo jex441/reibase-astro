@@ -1,0 +1,23 @@
+---
+import "../../styles/rb.css";
+---
+    <section class="rb">
+    <div class="wrapper">
+    <div class="blue"><img src="bluerb.png"  /></div>
+    <div class="black"><img src="blackrb.png"  /></div>
+    </div>
+</section>
+
+<script>
+window.addEventListener('scroll', function(e) {
+    
+    const black = document.querySelector('.black');
+    const blue = document.querySelector('.blue');
+
+    let scrolled = window.pageYOffset;
+    let rate = scrolled * .03;
+
+    black.style.transform = `translate3d(0px, ${rate}px, 0px)`;
+    blue.style.transform = `translate3d(0px, -${rate}px, 0px)`;
+})
+</script>

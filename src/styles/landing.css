@@ -1,217 +1,170 @@
 .landing {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
-    padding: 6rem 2rem 2rem 8rem;
+    background-color: #103C42;
+    padding: 8rem 2rem 2rem 4rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-image: url('/globe.png');
-    background-position: right 10px;
-    background-repeat: no-repeat;
-    background-size: 920px;
+    align-items: center;
+    position: relative;
     overflow: hidden;
 }
 
 .intro {
     display: flex;
     flex-direction: column;
-    width: 40%;
-}
-
-.intro h3 {
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--secondary);
-    margin-bottom: 1.5rem;
+    width: 55%;
 }
 
 .intro h1 {
-    color: var(--dark);
-    font-size: 42px;
-    line-height: 50px;
-    font-weight: 600;
-}
-
-.intro .primary {
-    font-size: inherit;
-    font-weight: inherit;
-    color: var(--primary)
+    font-size: 72px;
+    line-height: 78px;
+    color: #FFFBE0;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .intro p {
-    font-size: 15px;
-    line-height: 30px;
+    color: #D1DBBD;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Source Serif 4';
     font-weight: 300;
-    color: var(--secondary);
-    margin: 1rem 0rem 1rem 0rem;
+
 }
 
-.getStartedButton {
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.tryBtn {
     cursor: pointer;
     outline: none;
     border: none;
     font-size: 20px;
-    background: var(--primary);
+    background: #A3DEC9;
     margin-top: 2rem;
     padding: .5rem 1rem .5rem 1rem;
-    color: white;
+    color: #103C42;
     width: 180px;
     height: 45px;
-    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.19);
-    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 .getStartedButton img {
-    height: 20px;
+    height: 18px;
+    width: auto;
+}
+
+.learnBtn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background: #FFFBE0;
+    margin-top: 2rem;
+    padding: .5rem 1rem .5rem 1rem;
+    color: #103C42;
+    width: 180px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .techstars {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
-    line-height: 24px;
     margin-top: 3rem;
-    color: var(--secondary);
-    display: flex;
-    align-items: center;
+    color: #D1DBBD;
+    border-bottom: 2px solid #D1DBBD;
+    width: fit-content;
 }
 
-.techstars img {
-  margin: .125rem 0rem 0rem .5rem;
-  height: 26px;
+.downArrowsLanding {
+    background-image: url("../downarrowlanding.png");
+    background-repeat: repeat-y;
+    position: absolute;
+    background-position: center;
+    right: 40px;
+    top: 0px;
+    background-size: contain;
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    width: 40px;
+    z-index: 5;
 }
 
-.techstarsInline {
-    margin-top: 1.5rem;
-    font-size: 20px;
-    display: none;
-    font-weight: 600;
+.upArrowsLanding {
+    background-image: url("../uparrowlanding.png");
+    background-repeat: repeat-y;
+    position: absolute;
+    background-position: center;
+    right: 100px;
+    top: 0px;
+    background-size: contain;
+    display: block;
+    width: 40px;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 5;
 }
-
-.techstarsInline img {
-    margin: .1rem 0rem 0rem .5rem;
-    height: 22px;
-  }
-
-.right {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 65%;
-}
-
-.landingVideo video {
-    border-radius: 10px;
-    width: 650px;
-    height: 368px;
-    box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.25);
-}
-
-.slide {
-    display: none;
-  }
-
-.barsContainer {
-    width: 650px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin: 5px;
-    text-align: center;
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: .7px;
-    margin-top: 4rem;
-}
-
-  .bar {
-    width: 33%;
-    cursor: pointer;
-    height: 24px;
-    background-color: rgba(23, 23, 23, 0.7);
-    transition: background-color 0.6s ease;
-    margin: 1px;
-    padding: 3px;
-  }
-  
-  .active, .bar:hover {
-    background-color: rgba(23, 23, 23, 0.9);
-  }
-
-  .barsContainer :nth-child(1){
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  .barsContainer :nth-child(3){
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
 @media (max-width: 854px) {
-    .landing {
-        height: 85vh;
-        flex-direction: column;
-        padding: 1rem;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-top: 6rem;
-        background-position: 10px 300px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        overflow: hidden;
-    }
+.landing {
+    max-height: 100vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 7rem 1rem;
+}
 
-    .getStartedButton {
-        display: none;
-    }
+.tryBtn {
+    width: 120px;
+}
 
-    .intro {
-        text-align: left;
-        width: 100%;
-        margin-bottom: 1rem;
-        margin-top: 0rem;
-    }
+.intro {
+    width: 70%;
+}
 
-    .intro h3 {
-        font-size: 14px;
-    }
+.intro h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 1rem;
+}
 
-    .intro h1 {
-        font-size: 32px;
-        line-height: 38px;
-    }
+.intro p {
+    font-size: 14px;
+    line-height: 24px;
+}
 
-    .intro p {
-        font-size: 14px;
-        line-height: 22px;
-        margin-bottom: 1rem;
-    }
+.tryBtn {
+    font-size: 16px;
+    padding: 0;
+}
 
-    .right {
-        align-content: center;
-        width: 100%;
-    }
+.tryBtn img {
+    height: 16px;
+}
 
-    .landingVideo {
-        width: 100%;
-        margin: 0rem;
-    }
-    
-    .landingVideo video {
-        width: 100%;
-        height: auto;
-    }
+.learnBtn {
+    padding: 0;
+    font-size: 16px;
+    width: 120px;
+}
 
-    .barsContainer {
-        margin-top: 1rem;
-        width: 100%;
-    }
-    .techstars {
-        display: none;
-    }
-    .techstarsInline {
-    display: flex;
-    align-items: center;
-    }
+.downArrowsLanding {
+    right: 5px;
+    width: 25px;
+}
+
+.upArrowsLanding {
+    right: 35px;
+    width: 25px;
+}
+
 }
