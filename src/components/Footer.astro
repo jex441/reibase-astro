@@ -32,7 +32,7 @@ const currentYear = new Date().getFullYear();
           <label for="reply_to" class="text-white">Your Email</label>
           <input class="w-3/4 p-2 bg-black outline-white border-white border" type="email" name="reply_to" />
           <button type="submit" class="bg-black border border-white my-3 px-6 py-2 text-white">Submit</button>
-          <div class="success">Thank you - we will be in touch shortly.</div>
+          <div class="success hidden">Thank you - we will be in touch shortly.</div>
         </form>
       </div>
     </div>
@@ -60,9 +60,10 @@ const currentYear = new Date().getFullYear();
                   .then(function() {
                       console.log('SUCCESS!');
                       document.getElementById("template_v1ulh7q").reset();
+                      document.querySelector(".success").classList.toggle("hidden");
                       
                       setTimeout(()=>{
-                        document.querySelector(".success").style.display = "none";
+                        document.querySelector(".success").classList.toggle("hidden");
                       }, [4000])
                   }, function(error) {
                       console.log('FAILED...', error);
